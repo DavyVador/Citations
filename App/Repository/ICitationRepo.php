@@ -1,5 +1,8 @@
-<?php 
-    interface ICitationRepository
+<?php
+
+use App\Repository;
+
+interface ICitationRepository
     {
         public function add(Citation $citation);
 

@@ -2,22 +2,18 @@
 
 namespace App\Controller\Front;
 
-//use App\Form\FormUser;
-//use App\Repository\ISportRepository;
-//use App\Repository\SportRepository;
-//use App\Service\View;
-
+use App\Repository\CitationRepository;
 use App\Service\View;
 
 class HomeController
 {
     use View;
 
-    private CitationsRepository $citationRepository;
+    private CitationRepository $citationsRepository;
 
     public function __construct()
     {
-        $this->citationsRepository = new CitationsRepository();
+        $this->citationsRepository = new CitationRepository();
     }
 
     public function invoke(): string
@@ -26,8 +22,12 @@ class HomeController
             SITE_NAME . ' - HomePage',
             'home.php',
             [
-                'formCitation' => FormCitation::buildCitation(),
-                'citations' => $this->citationRepository->fetchAll(),
+//                'formCitation' => FormCitation::buildCitation(),
+                'citations' => $this->citationsRepository->fetchAll(),
             ]);
+    }
+
+    public function addCitation()
+    {
     }
 }

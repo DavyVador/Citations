@@ -3,6 +3,7 @@
 require_once 'Autoloader.php';
 
 use App\Autoloader;
+use App\Controller\Front\HomeController;
 use App\Exception\RouterException;
 use App\Service\Router;
 
@@ -10,7 +11,8 @@ Autoloader::$folderList =
     [
         "App/Exception/",
         "App/Service/",
-        "App/Controller/",
+        "App/Controller/Front/",
+        "App/Repository/",
     ];
 Autoloader::register();
 
