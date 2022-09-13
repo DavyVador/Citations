@@ -26,7 +26,7 @@ class HomeController
             SITE_NAME . ' - HomePage',
             'home.php',
             [
-//                'formCitation' => FormCitation::buildCitation(),
+                'formCitation' => FormCitation::buildCitation(),
                 'citations' => $this->citationRepository->fetchAll(),
             ]);
     }
