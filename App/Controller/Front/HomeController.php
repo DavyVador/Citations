@@ -2,6 +2,7 @@
 
 namespace App\Controller\Front;
 
+use App\Form\FormCitation;
 use App\Repository\CitationRepository;
 use App\Service\View;
 
@@ -22,12 +23,13 @@ class HomeController
             SITE_NAME . ' - HomePage',
             'home.php',
             [
-//                'formCitation' => FormCitation::buildCitation(),
+                'formCitation' => FormCitation::buildAddCitation(),
                 'citations' => $this->citationsRepository->fetchAll(),
             ]);
     }
 
     public function addCitation()
     {
+        var_dump($_POST);
     }
 }

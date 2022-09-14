@@ -10,7 +10,7 @@
                     </div>
                 <?php } ?>
             </div>
-            <?php // $formCitation->create(); ?>
+            <?php echo $formCitation->create(); ?>
         </div>
     </div>
 </div>

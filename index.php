@@ -15,6 +15,7 @@ Autoloader::$folderList =
         "App/Service/",
         "App/Controller/Front/",
         "App/Repository/",
+        "App/Form/",
     ];
 Autoloader::register();
 
