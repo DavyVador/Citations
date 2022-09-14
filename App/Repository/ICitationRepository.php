@@ -1,6 +1,8 @@
 <?php
 
-use App\Repository;
+namespace App\Repository;
+
+use App\Entity\Citation;
 
 interface ICitationRepository
     {
@@ -8,4 +10,3 @@ interface ICitationRepository
 
         public function fetchAll();
     }
-?>

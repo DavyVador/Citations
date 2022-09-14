@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Autoloader.php';
+require_once 'config/config.php';
 
 use App\Autoloader;
 use App\Controller\Front\HomeController;
@@ -9,6 +10,7 @@ use App\Service\Router;
 
 Autoloader::$folderList =
     [
+        "App/Entity/",
         "App/Exception/",
         "App/Service/",
         "App/Controller/Front/",

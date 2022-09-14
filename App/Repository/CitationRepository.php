@@ -4,7 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Citation;
 use App\Service\Database;
-use ICitationRepository;
+use PDO;
 use PDOException;
 
 class CitationRepository extends Database implements ICitationRepository

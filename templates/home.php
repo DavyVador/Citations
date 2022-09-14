@@ -6,11 +6,11 @@
                 <?php foreach ($citations as $citation) { ?>
                     <div class="col-3">
                         <h1><?php echo $citation->getCitation(); ?></h1>
-                        <h3>-- <?php echo $citation->getAuteur(); ?>/h3>
+                        <h3>-- <?php echo $citation->getAuteur(); ?></h3>
                     </div>
                 <?php } ?>
             </div>
-            <?= $formCitation->create(); ?>
+            <?php // $formCitation->create(); ?>
         </div>
     </div>
 </div>
