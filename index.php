@@ -25,17 +25,18 @@ try {
 
     $router = new Router($_GET['url']);
 
-    $router->get('/', function () {
-        echo (new HomeController())->invoke();
-    });
-
     $router->post('/add', function () {
         (new HomeController())->addCitation();
     });
 
+    $router->get('/', function () {
+        echo (new HomeController())->invoke();
+    });
+
     $router->run();
-} catch (RouterException|Exception $e) {
-    die('Error: ' . $e->getMessage());
+}
+catch (RouterException|Exception $e) {
+    die('Error: ' . $e);
 }
 
 
